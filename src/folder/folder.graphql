@@ -1,0 +1,13 @@
+type Folder {
+  id: ID!
+  name: String!
+}
+
+type Mutation {
+  createFolder(name: String!): Folder
+}
+
+type Query {
+  folders: [Folder]!
+  folder(id: ID!): Folder
+}
