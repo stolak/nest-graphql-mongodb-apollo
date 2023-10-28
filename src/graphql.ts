@@ -8,30 +8,18 @@
 /* tslint:disable */
 /* eslint-disable */
 
-export interface File {
-    id: string;
-    name: string;
-    type: string;
-    path: string;
-    folderId?: Nullable<string>;
-}
-
-export interface IMutation {
-    createFile(name: string, type: string, path: string, folderId?: Nullable<string>): Nullable<File> | Promise<Nullable<File>>;
-    createFolder(name: string): Nullable<Folder> | Promise<Nullable<Folder>>;
-}
-
-export interface IQuery {
-    getFiles(folderId?: Nullable<string>): Nullable<Nullable<File>[]> | Promise<Nullable<Nullable<File>[]>>;
-    files(): Nullable<File>[] | Promise<Nullable<File>[]>;
-    file(id: string): Nullable<File> | Promise<Nullable<File>>;
-    folders(): Nullable<Folder>[] | Promise<Nullable<Folder>[]>;
-    folder(id: string): Nullable<Folder> | Promise<Nullable<Folder>>;
-}
-
 export interface Folder {
     id: string;
     name: string;
+}
+
+export interface IMutation {
+    createFolder(name?: Nullable<string>): Nullable<Folder> | Promise<Nullable<Folder>>;
+}
+
+export interface IQuery {
+    folders(): Nullable<Folder>[] | Promise<Nullable<Folder>[]>;
+    folder(id: string): Nullable<Folder> | Promise<Nullable<Folder>>;
 }
 
 type Nullable<T> = T | null;

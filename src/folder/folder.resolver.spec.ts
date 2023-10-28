@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { FileResolver } from './file.resolver';
+import { FolderResolver } from './folder.resolver';
 
-describe('FileResolver', () => {
-  let resolver: FileResolver;
+describe('FolderResolver', () => {
+  let resolver: FolderResolver;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [FileResolver],
+      providers: [FolderResolver],
     }).compile();
 
-    resolver = module.get<FileResolver>(FileResolver);
+    resolver = module.get<FolderResolver>(FolderResolver);
   });
 
   it('should be defined', () => {

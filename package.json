@@ -1,5 +1,5 @@
 {
-  "name": "agian",
+  "name": "newest",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -22,18 +22,17 @@
   "dependencies": {
     "@nestjs/apollo": "^12.0.9",
     "@nestjs/common": "^10.0.0",
-    "@nestjs/config": "^3.1.1",
     "@nestjs/core": "^10.0.0",
     "@nestjs/graphql": "^12.0.9",
-    "@nestjs/mapped-types": "*",
     "@nestjs/mongoose": "^10.0.1",
     "@nestjs/platform-express": "^10.0.0",
-    "@types/graphql": "^14.5.0",
     "apollo-server-express": "^3.12.1",
+    "cors": "^2.8.5",
     "graphql": "^16.8.1",
-    "graphql-tools": "^9.0.0",
+    "mongoose": "^7.6.3",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "ts-morph": "^19.0.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
@@ -54,7 +53,6 @@
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.0",
     "ts-loader": "^9.4.3",
-    "ts-morph": "^19.0.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.3"
