@@ -1,0 +1,11 @@
+type File {
+  id: ID!
+  name: String!
+  type: String!
+  path: String!
+  folderId: ID
+}
+type Mutation {
+  uploadFile(file: Upload!, folderId: ID): File
+  deleteFile(id: ID!): Boolean
+}
