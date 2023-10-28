@@ -3,7 +3,7 @@ import { FolderController } from './folder.controller';
 import { FolderService } from './folder.service';
 import { FolderResolver } from './folder.resolver';
 
-import { Folder, FolderSchema } from './folder.model';
+import { FolderSchema } from './folder.model';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
