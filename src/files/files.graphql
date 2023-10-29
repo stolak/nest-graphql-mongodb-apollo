@@ -1,0 +1,27 @@
+type File {
+  id: ID!
+  name: String!
+  type: String!
+  path: String!
+  lastModified: String!
+  size: Int!
+  folderId: ID
+}
+
+type Query {
+  getFiles(folderId: ID): [File]
+}
+
+type Mutation {
+  deleteFile(id: ID!): Boolean
+  createFile(input: FileInput!): File
+}
+
+input FileInput {
+  name: String!
+  type: String!
+  path: String!
+  lastModified: String!
+  size: Int!
+  folderId: ID
+}

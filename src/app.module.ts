@@ -6,6 +6,9 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
 import { FolderModule } from './folder/folder.module';
+// import { FilesService } from './files/files.service';
+import { FilesResolver } from './files/files.resolver';
+import { FilesModule } from './files/files.module';
 
 @Module({
   imports: [
@@ -21,6 +24,7 @@ import { FolderModule } from './folder/folder.module';
       playground: true,
     }),
     FolderModule,
+    FilesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
