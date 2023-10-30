@@ -23,8 +23,6 @@ export class FilesService {
   }
 
   async createFile(input: FileInput): Promise<File> {
-    // Implement logic to create a new file
-    console.log('Ijdjdjd am here');
     const createdFile = new this.fileModel(input);
     return createdFile.save();
   }
